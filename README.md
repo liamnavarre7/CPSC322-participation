@@ -1,2 +1,2 @@
-# CPSC322-participation
-Participation for CPSC322
+# CPSC332-participation
+Participation for CPSC332
