@@ -16,14 +16,44 @@
         <label for="first">First Name</label>
         <!--The name attribute is required for the form but the exact name doesn't matter
         it could be first, second, last, tacos, anything -->
-        <input type="text" id="first" name="first">
+        <input value="Default Value" type="text" id="first" name="first" placeholder="First name only please">
         </p>
         <p>
             <label for="last">Last Name</label>
-            <input type="text" id="last" name="last">
+            <input type="text" id="last" name="last" placeholder="Last name only please">
         </p>
-        <input type="submit">
+        <p>
+            <label for="area"> Tell a story</label>
+            <textarea id="area" rows="5" name="area"
+            placeholder="Enter multi line text here">
+            </textarea>
+        </p>
+
+        <p>
+            <label for="item1">Item 1:</label>
+            <input type="checkbox" name="item1" id="item1">
+        </p>
+        <p>
+            <label for="item2">Item 2:</label>
+            <input type="checkbox" name="item2" id="item2">
+        </p>
+
+        <p>Select your favorite color:</p>
+
+        <div>
+            <input type="radio" name="shade" value="blue" id="colorB">
+            <label for="colorB">blue</label>
+        </div>
+        <div>
+            <input type="radio" name="shade" value="red" id="colorR">
+            <label for="colorR">red</label>
+        </div>
+        <input type="submit" value="Submit Form Data">
     </form>
 </body>
+
+<footer>
+    <a href="../../index.html">Back &nbsp; to the index</a>
+</footer>
 
 </html>
