@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-21 Participation</title>
+</head>
+<body>
+    <h1>Hello, World! New web page</h1>
+    <form action="submission.html">
+        <p>
+        <label for="first">First Name</label>
+        <input value="Default Value" type="text" id="fname" name="first" placeholder="First name only please">
+        </p>
+        <p>
+            <label for="last">Last Name</label>
+            <input type="text" id="lname" name="last" placeholder="Last name only please">
+        </p>
+        <p>
+            <label for="item1">Item 1:</label>
+            <input type="checkbox" name="item1" id="item1">
+        </p>
+        <p>
+            <label for="item2">Item 2:</label>
+            <input type="checkbox" name="item2" id="item2">
+        </p>
+
+        <p>Select your favorite color:</p>
+
+        <div>
+            <input type="radio" name="shade" value="blue" id="colorB">
+            <label for="colorB">blue</label>
+        </div>
+        <div>
+            <input type="radio" name="shade" value="red" id="colorR">
+            <label for="colorR">red</label>
+        </div>
+        <div>
+            <input type="radio" name="shade" value="green" id="colorG">
+            <label for="colorG">green</label>
+        </div>
+
+        <label for="agree">It was funny</label>
+        <select name="agree" id="agree">
+            <option value="Yes">I agree</option>
+            <option value="Maybe">I don't know</option>
+            <option value="No"> I disagree</option>
+        </select>
+        <input type="submit" value="Submit Form Data">
+    </form>
+</body>
+</html>
