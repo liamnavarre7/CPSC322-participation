@@ -58,7 +58,7 @@
                 Ball.prototype.draw = function () {
                     console.log("draw method");
                     // Shadow for the balls
-                    context.shadowBlur = 10;
+                    context.shadowBlur = 5;
                     context.shadowOffsetX = 5;
                     context.shadowOffsetY = 5;
                     context.shadowColor = "black";
@@ -154,7 +154,7 @@
             var lastPosition = [0, 0];
 
             //set up outer rectangle
-            context.fillStyle = "aquamarine";
+            context.fillStyle = "green";
 
             //shadow for outer rectangle
             context.shadowBlur = 5;
@@ -192,7 +192,7 @@
             context.fillText("Hello, World!", canvas.width / 2, 80);
 
             //set up and style "button"
-            context.fillStyle = "yellow";
+            context.fillStyle = "orange";
             //note the specific coords being used
             context.fillRect(boxXStartCoord, boxYStartCoord, boxXEndCoord, boxYEndCoord);
             //another text label
@@ -231,6 +231,8 @@
                     window.cancelAnimationFrame(animFramId);
                 });
 
+                function createAtMouseMove() {
+                };
                 //set up font label            
                 context.font = "bold 16pt Times New Roman";
                 context.fillStyle = "white";
@@ -267,6 +269,7 @@
 <body>
     <canvas id="myCanvas" width="300" height="300"></canvas>
     <button id="clear">Clear</button>
+    <footer><a href="../../index.html">Back to the participation index</a></footer>
 </body>
 
 </html>
