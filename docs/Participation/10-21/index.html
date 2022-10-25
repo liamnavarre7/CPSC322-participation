@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            border-width: 5px;
+            border: dotted;
+            border-color: black;
+            padding: 10px;
+            margin: 10px;
+        }
+        form{
+            padding: 5px;
+            margin: 5px;
+            text-align: center;
+        }
+
+    </style>
+    <script>
+        function validateForm(){
+            var label1 = document.getElementById("label1");
+            var label2 = document.getElementById("label2");
+            var label3 = document.getElementById("label3");
+
+            if(label1.value == ""){
+                window.alert("Please enter a value for label 1");
+            }
+            if(label2.value == ""){
+                window.alert("Please enter a value for label 2");
+            }
+            if(label3.value == ""){
+                window.alert("Please enter a value for label 3");
+            }
+        }
+
+        function storeData(){
+            var label1 = document.getElementById("label1");
+            var label2 = document.getElementById("label2");
+            var label3 = document.getElementById("label3");
+
+            sessionStorage.setItem("label1", label1.value);
+            sessionStorage.setItem("label2", label2.value);
+            sessionStorage.setItem("label3", label3.value);
+        }
+
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>CPSC 322 10/21 Participation</legend>
+        <form method="POST" action="submission.html">
+            <label for="label1">Grocery item 1</label>
+            <input type="text" id="label1" name="label1" required>
+            <button onclick="storeData()" type="button">Save Data</button>
+            <br>
+            <label for="label2">Grocery item 2</label>
+            <input type="text" id="label2" name="label2" required>
+            <button onclick="storeData()" type="button">Save Data</button>
+            <br>
+            <label for="label3">Grocery item 3</label>
+            <input type="text" id="label3" name="label3" required>
+            <button onclick="storeData()" type="button">Save Data</button>
+            <br>
+            <input type="submit" value="Submit" onclick="validateForm()">
+        </form>
+    </fieldset>
+</body>
+</html>
