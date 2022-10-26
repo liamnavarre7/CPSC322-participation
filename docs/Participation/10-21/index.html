@@ -41,10 +41,34 @@
             var label1 = document.getElementById("label1");
             var label2 = document.getElementById("label2");
             var label3 = document.getElementById("label3");
+            var button1 = document.getElementById("saveButton1");
+            var button2 = document.getElementById("saveButton2");
+            var button3 = document.getElementById("saveButton3");
 
             sessionStorage.setItem("label1", label1.value);
             sessionStorage.setItem("label2", label2.value);
             sessionStorage.setItem("label3", label3.value);
+            button1.innerText = "Saved";
+            button2.innerText = "Saved";
+            button3.innerText = "Saved";
+        }
+
+        function clearData1(){
+            var label1 = document.getElementById("label1");
+            sessionStorage.removeItem("label1");
+            label1.value = "";
+        }
+
+        function clearData2(){
+            var label2 = document.getElementById("label2");
+            sessionStorage.removeItem("label2");
+            label2.value = "";
+        }
+
+        function clearData3(){
+            var label3 = document.getElementById("label3");
+            sessionStorage.removeItem("label3");
+            label3.value = "";
         }
 
     </script>
@@ -52,18 +76,18 @@
 <body>
     <fieldset>
         <legend>CPSC 322 10/21 Participation</legend>
-        <form method="POST" action="submission.html">
+        <form action="submission.html" method="POST">
             <label for="label1">Grocery item 1</label>
-            <input type="text" id="label1" name="label1" required>
-            <button onclick="storeData()" type="button">Save Data</button>
+            <input onfocus="clearData1()" type="text" id="label1" name="label1" required>
+            <button id="saveButton1" onclick="storeData()" type="button">Save Data</button>
             <br>
             <label for="label2">Grocery item 2</label>
-            <input type="text" id="label2" name="label2" required>
-            <button onclick="storeData()" type="button">Save Data</button>
+            <input  onfocus="clearData2()" type="text" id="label2" name="label2" required>
+            <button  id="saveButton2" onclick="storeData()" type="button">Save Data</button>
             <br>
             <label for="label3">Grocery item 3</label>
-            <input type="text" id="label3" name="label3" required>
-            <button onclick="storeData()" type="button">Save Data</button>
+            <input  onfocus="clearData3()" type="text" id="label3" name="label3" required>
+            <button  id="saveButton3" onclick="storeData()" type="button">Save Data</button>
             <br>
             <input type="submit" value="Submit" onclick="validateForm()">
         </form>

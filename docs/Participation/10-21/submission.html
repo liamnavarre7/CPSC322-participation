@@ -17,14 +17,15 @@
         }
     </style>
     <script>
-        window.onload() = function(){
-            var label1 = document.getElementById("label1");
-            var label2 = document.getElementById("label2");
-            var label3 = document.getElementById("label3");
+        window.onload = function(){
+            let label1 =  sessionStorage.getItem("label1");
+            let label2 = sessionStorage.getItem("label2");
+            let label3 = sessionStorage.getItem("label3");
+            document.getElementById("label1").innerText = label1;
+            document.getElementById("label2").innerText = label2;
+            document.getElementById("label3").innerText = label3;
 
-            label1.innerHTML = sessionStorage.getItem("label1");
-            label2.innerHTML = sessionStorage.getItem("label2");
-            label3.innerHTML = sessionStorage.getItem("label3");
+
         }
     </script>
 </head>
